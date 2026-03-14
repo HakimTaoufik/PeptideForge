@@ -1,0 +1,51 @@
+{
+  "model_name": "rf_amp_scorer_v1",
+  "threshold": 0.5,
+  "feature_columns": [
+    "length",
+    "charge",
+    "hydrophobicity",
+    "frac_basic",
+    "frac_acidic",
+    "cysteine_count",
+    "basic_count",
+    "acidic_count",
+    "aromatic_frac",
+    "aliphatic_frac",
+    "polar_frac",
+    "proline_frac",
+    "glycine_frac",
+    "cysteine_frac",
+    "lys_arg_ratio",
+    "frac_A",
+    "frac_C",
+    "frac_D",
+    "frac_E",
+    "frac_F",
+    "frac_G",
+    "frac_H",
+    "frac_I",
+    "frac_K",
+    "frac_L",
+    "frac_M",
+    "frac_N",
+    "frac_P",
+    "frac_Q",
+    "frac_R",
+    "frac_S",
+    "frac_T",
+    "frac_V",
+    "frac_W",
+    "frac_Y"
+  ],
+  "notes": {
+    "task": "AMP vs non-AMP scoring",
+    "model_type": "RandomForestClassifier",
+    "sequence_filters": "standard amino acids only, peptide length 10-50",
+    "conditioning_proxies": [
+      "length",
+      "charge",
+      "hydrophobicity"
+    ]
+  }
+}
