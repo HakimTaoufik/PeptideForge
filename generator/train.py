@@ -76,9 +76,9 @@ class PeptideDataset(Dataset):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--train_csv", default="./data/generator/train_core.csv")
-    parser.add_argument("--val_csv", default="./data/generator/val_core.csv")
-    parser.add_argument("--output_dir", default="./outputs/gpt/peptide_gpt2")
+    parser.add_argument("--train_csv", default="/Data/protein/data/generator/train_core.csv")
+    parser.add_argument("--val_csv", default="/Data/protein/data/generator/val_core.csv")
+    parser.add_argument("--output_dir", default="/Data/protein/outputs/gpt/peptide_gpt2")
     parser.add_argument("--epochs", type=int, default=20)
     parser.add_argument("--batch_size", type=int, default=32)
     parser.add_argument("--lr", type=float, default=5e-4)
