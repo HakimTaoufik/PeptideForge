@@ -213,6 +213,7 @@ notebooks/data/
 # Model checkpoints
 *.joblib
 
+noteboooks/
 notebooks/
 
 # gpt2 model
