@@ -214,3 +214,6 @@ notebooks/data/
 *.joblib
 
 notebooks/
+
+# gpt2 model
+*.tar.xz
