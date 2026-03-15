@@ -1,0 +1,10 @@
+Model           Status          Time
+─────────────────────────────────────────
+✓ Transformer     OK              1m 41s
+✓ CVAE            OK              0m 52s
+✓ LSTM            OK              0m 49s
+✓ Diffusion       OK              1m 9s
+✓ MaskGIT         OK              0m 54s
+✓ EBM             OK              3m 47s
+✓ JEPA            OK              1m 3s
+✓ GPT-2           OK              2m 28s
