@@ -212,3 +212,5 @@ notebooks/data/
 
 # Model checkpoints
 *.joblib
+
+notebooks/
