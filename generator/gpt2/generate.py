@@ -35,7 +35,7 @@ def generate_peptides(model, tokenizer, tags, num_sequences=5,
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model_dir", default="/Data/protein/outputs/gpt/peptide_gpt2/best")
+    parser.add_argument("--model_path", default="/Data/protein/outputs/gpt/peptide_gpt2/best")
     parser.add_argument("--length_tag", default="<LEN_MED>")
     parser.add_argument("--charge_tag", default="<CHARGE_MED>")
     parser.add_argument("--hydro_tag", default="<HYDRO_MED>")
@@ -57,7 +57,7 @@ def main():
         "pad_token": "<PAD>",
     })
 
-    model = GPT2LMHeadModel.from_pretrained(args.model_dir)
+    model = GPT2LMHeadModel.from_pretrained(args.model_path)
 
     model.eval()
     if torch.cuda.is_available():

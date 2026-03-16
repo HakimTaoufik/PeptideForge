@@ -218,3 +218,7 @@ notebooks/
 
 # gpt2 model
 *.tar.xz
+
+*.png
+*.html
+*.pdf
