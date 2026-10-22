@@ -222,3 +222,15 @@ notebooks/
 *.png
 *.html
 *.pdf
+
+# Local OS metadata and new experiment outputs; preserve tracked evidence.
+.DS_Store
+._*
+Thumbs.db
+/outputs/
+/runs/
+/.venv-cpu/
+
+# Documentation figures are intentional, reviewable research artifacts.
+!docs/assets/*.png
+!docs/assets/*.pdf
