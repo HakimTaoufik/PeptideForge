@@ -1,0 +1,251 @@
+{
+  "amp_subset_of_scorer": {
+    "test": true,
+    "train": true,
+    "val": true
+  },
+  "datasets": {
+    "amp_test": {
+      "core_lines": 2974,
+      "core_matches_rich_order": true,
+      "labels": {
+        "1": 2974
+      },
+      "loader_rows": 2973,
+      "max_length": 50,
+      "min_length": 10,
+      "observed_label_ranges": {
+        "charge": {
+          "CHARGE_HIGH": [
+            5.0,
+            23.0
+          ],
+          "CHARGE_LOW": [
+            -10.0,
+            1.0
+          ],
+          "CHARGE_MED": [
+            2.0,
+            4.0
+          ]
+        },
+        "hydrophobicity": {
+          "HYDRO_HIGH": [
+            1.0,
+            3.2818181818181813
+          ],
+          "HYDRO_LOW": [
+            -3.9,
+            -1.0000000000000002
+          ],
+          "HYDRO_MED": [
+            -1.0,
+            0.9956521739130433
+          ]
+        },
+        "length": {
+          "LEN_LONG": [
+            36.0,
+            50.0
+          ],
+          "LEN_MED": [
+            21.0,
+            35.0
+          ],
+          "LEN_SHORT": [
+            10.0,
+            20.0
+          ]
+        }
+      },
+      "rows": 2974,
+      "unique": 2974,
+      "valid_aa": 2974
+    },
+    "amp_train": {
+      "core_lines": 23791,
+      "core_matches_rich_order": true,
+      "labels": {
+        "1": 23791
+      },
+      "loader_rows": 23790,
+      "max_length": 50,
+      "min_length": 10,
+      "observed_label_ranges": {
+        "charge": {
+          "CHARGE_HIGH": [
+            5.0,
+            36.0
+          ],
+          "CHARGE_LOW": [
+            -20.0,
+            1.0
+          ],
+          "CHARGE_MED": [
+            2.0,
+            4.0
+          ]
+        },
+        "hydrophobicity": {
+          "HYDRO_HIGH": [
+            1.0,
+            3.6049999999999995
+          ],
+          "HYDRO_LOW": [
+            -4.5,
+            -1.0000000000000002
+          ],
+          "HYDRO_MED": [
+            -1.0,
+            0.9999999999999999
+          ]
+        },
+        "length": {
+          "LEN_LONG": [
+            36.0,
+            50.0
+          ],
+          "LEN_MED": [
+            21.0,
+            35.0
+          ],
+          "LEN_SHORT": [
+            10.0,
+            20.0
+          ]
+        }
+      },
+      "rows": 23791,
+      "unique": 23791,
+      "valid_aa": 23791
+    },
+    "amp_val": {
+      "core_lines": 2974,
+      "core_matches_rich_order": true,
+      "labels": {
+        "1": 2974
+      },
+      "loader_rows": 2973,
+      "max_length": 50,
+      "min_length": 10,
+      "observed_label_ranges": {
+        "charge": {
+          "CHARGE_HIGH": [
+            5.0,
+            24.0
+          ],
+          "CHARGE_LOW": [
+            -12.0,
+            1.0
+          ],
+          "CHARGE_MED": [
+            2.0,
+            4.0
+          ]
+        },
+        "hydrophobicity": {
+          "HYDRO_HIGH": [
+            1.0,
+            3.548387096774193
+          ],
+          "HYDRO_LOW": [
+            -4.5,
+            -1.0000000000000002
+          ],
+          "HYDRO_MED": [
+            -1.0,
+            0.9904761904761905
+          ]
+        },
+        "length": {
+          "LEN_LONG": [
+            36.0,
+            50.0
+          ],
+          "LEN_MED": [
+            21.0,
+            35.0
+          ],
+          "LEN_SHORT": [
+            10.0,
+            20.0
+          ]
+        }
+      },
+      "rows": 2974,
+      "unique": 2974,
+      "valid_aa": 2974
+    },
+    "scorer_test": {
+      "labels": {
+        "0": 13221,
+        "1": 2974
+      },
+      "max_length": 50,
+      "min_length": 10,
+      "rows": 16195,
+      "unique": 16195,
+      "valid_aa": 16195
+    },
+    "scorer_train": {
+      "labels": {
+        "0": 105765,
+        "1": 23791
+      },
+      "max_length": 50,
+      "min_length": 10,
+      "rows": 129556,
+      "unique": 129556,
+      "valid_aa": 129556
+    },
+    "scorer_val": {
+      "labels": {
+        "0": 13221,
+        "1": 2974
+      },
+      "max_length": 50,
+      "min_length": 10,
+      "rows": 16195,
+      "unique": 16195,
+      "valid_aa": 16195
+    }
+  },
+  "definitions": {
+    "charge": "count(K)+count(R)-count(D)-count(E)",
+    "charge_bins": "<=1; 2..4; >=5 (inferred from rich CSV labels)",
+    "hydro_bins": "<-1; [-1,1); >=1",
+    "hydrophobicity": "Unrounded math.fsum Kyte-Doolittle values / length; floating-point boundary cases can differ from NumPy.",
+    "length_bins": "<=20; 21..35; >=36 (inferred from rich CSV labels)",
+    "novelty": "Number of sample rows absent by exact sequence match from the full rich AMP training CSV; duplicates count per row."
+  },
+  "exact_split_overlaps": {
+    "amp_train_test": 0,
+    "amp_train_val": 0,
+    "amp_val_test": 0,
+    "scorer_train_test": 0,
+    "scorer_train_val": 0,
+    "scorer_val_test": 0
+  },
+  "source_sha256": {
+    "data/generator/test_core.csv": "bd790c762e63be70c59ff67d9f67b0aa1eba3b9e43dd7bfa12b937936176a190",
+    "data/generator/test_generator_amp_only.csv": "0f8792cfa8181555555db9cc95fa1dd9393824a7bce683ff9c0d7a0ece7bb5f5",
+    "data/generator/train_core.csv": "7a085dd9ded25069fc6935804701c29ae2f51bfdc7187a4117a0021720fd91ee",
+    "data/generator/train_generator_amp_only.csv": "b9572aca073c48531f9d89df78ac2560c45cefd3fda90f40b0ef6a4bd6e01568",
+    "data/generator/val_core.csv": "3a166ec3c061b64ac963cfcadea46dc1c7dadfb70f41d1ce9ddb72d1c4c7a098",
+    "data/generator/val_generator_amp_only.csv": "549ff13f5140b8a5c86d9ff9c52b1b7a745ac106271b71b1793e59f739a284dd",
+    "data/scorer/test_scorer.csv": "71fcb42f34399fed04fbcf9bc3b8b836fc8c3fb4149ad5d9910dc64be8e6fbb7",
+    "data/scorer/train_scorer.csv": "abd47ca3a77e9c49c5417ae7fe1beaf2afc180750473c84b795f3bfaffcaa228",
+    "data/scorer/val_scorer.csv": "1a9f8c92f671a569a7c1a83534d933aa0c3241b8ef640615ae3649e0a0cf0186",
+    "logs/generation_cvae.csv": "19352001c65b3a0364cbf36204691d591306bda9d3b87ecde7b3a747c9bede4d",
+    "logs/generation_diffusion.csv": "378394edf5b7fcd5ab42b8202120eb1a1714b84d8cfa2cef855aae98f65b947b",
+    "logs/generation_ebm.csv": "b049cdc5f23a2498f5e91cd5e827ed361ae81d0521882478251ee374c12c460c",
+    "logs/generation_gpt_2.csv": "c15c3b55e4849eb7e3bbe3b11936ec7b92b218fe5b4981355c6a98bf01013ccc",
+    "logs/generation_jepa.csv": "6c337e831f0079b5575fa42472df61d0f94ff76b061149e5f19f591ba68f0b67",
+    "logs/generation_lstm.csv": "b569c0602c6faee2f61a1d9dde4da862697a375f2d3c7b38abfc7c8f75c6e391",
+    "logs/generation_maskgit.csv": "32eea415d77cba45f9585923eecf541726e25046730056c87905471850735ccb",
+    "logs/generation_transformer.csv": "a3047f99ad8c7b6e7bec57a2fa5a746e3ae20e621a08357bf07b0ecb55f4228c",
+    "logs/scores_all_models.pkl": "1ff2539ca902cb6946dec645a81577db82651e29fba9af08ae035ab19a2a4975",
+    "scripts/research_report.py": "a318b217ec637d81c38b8580a78bdce48b221109d798351357119554a43b1215",
+    "training/utils/feature_extraction.py": "75221a8f03c64a6f0eb7ad0d011e74665dd98d90dcac0158a0d6644e85fc63f9"
+  }
+}
